@@ -1,0 +1,11 @@
+.checkBox {
+  margin: 16px 0px;
+  &__input {
+    transform: scale(1.5);
+    margin-right: 16px;
+  }
+  &__link {
+    color: var(--color-dark-light-500);
+    text-decoration: none;
+  }
+}

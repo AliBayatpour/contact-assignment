@@ -1,0 +1,88 @@
+@import "../../styles/breakpoints";
+
+.mainContainer {
+  min-height: 100vh;
+  background-color: var(--color-primary);
+  padding: 24px;
+}
+
+.formTitle {
+  color: var(--color-dark);
+  font-size: 40px;
+  font-weight: normal;
+  padding-top: 80px;
+  padding-bottom: 40px;
+  margin-bottom: 16px;
+}
+
+$gapRow: 38px;
+$gapCol: 20px;
+
+.inputGroup {
+  margin-bottom: 64px;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  gap: $gapRow $gapCol; /* row-gap column gap */
+
+  &__input {
+    @include xs {
+      width: 100%;
+    }
+    @include sm {
+      width: calc(50% - $gapCol);
+      max-width: 284px;
+    }
+  }
+}
+.textBox {
+  &__title {
+    margin-bottom: 16px;
+    color: var(--color-dark);
+  }
+  &__input {
+    background-color: var(--color-primary);
+    border-color: var(--color-dark-light-500);
+    outline: none;
+    font-size: 16px;
+    resize: none;
+    padding: 8px;
+    font-family: inherit;
+    width: 100%;
+    max-width: 588px;
+  }
+}
+
+.submitBut {
+  font-size: 24px;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  color: var(--color-dark);
+  position: relative;
+  padding-top: 32px;
+  cursor: pointer;
+  &--disabled {
+    color: var(--color-dark-light-400);
+    cursor: not-allowed;
+  }
+  &:after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-dark);
+    position: absolute;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    bottom: 0px;
+    left: 0px;
+    opacity: 1;
+  }
+  &:hover {
+    &:after {
+      content: "";
+      width: 0;
+      opacity: 0;
+    }
+  }
+}

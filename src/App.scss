@@ -1,0 +1,15 @@
+@use "./styles/grid";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// * setting up color theme for the app
+:root {
+  --color-primary: #a6d0d8;
+  --color-dark: #140923;
+  --color-dark-light-500: rgba(20, 9, 35, 0.6);
+  --color-dark-light-400: rgba(20, 9, 35, 0.5);
+}

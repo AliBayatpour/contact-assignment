@@ -1,0 +1,12 @@
+.infoBox {
+  margin-bottom: 28px;
+  font-size: 18px;
+  &__title {
+    color: var(--color-dark);
+    margin-bottom: 8px;
+  }
+  &__val {
+    color: var(--color-dark-light-400);
+    text-decoration: none;
+  }
+}

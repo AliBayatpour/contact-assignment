@@ -1,0 +1,27 @@
+@import "../../styles/breakpoints";
+
+$gapCol: 20px;
+
+.input {
+  @include xs {
+    width: 100%;
+  }
+  @include sm {
+    width: calc(50% - $gapCol);
+    max-width: 284px;
+  }
+  &--text {
+    padding: 9px 8px 10px 8px;
+    border-bottom: 1px solid #ddd;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: var(--color-primary);
+    border-color: var(--color-dark-light-500);
+    outline: none;
+    font-size: 16px;
+    &::placeholder {
+      color: var(--color-dark-light-500);
+    }
+  }
+}
