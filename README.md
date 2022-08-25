@@ -1,50 +1,35 @@
-# Getting Started with Create React App
+# Tuum Assignment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+First of all thank you for giving me this opportunity. I really enjoyed doing the task.
+
+Some Notes:
+1. This project is Dockerized so you can run it as a Docker container
+2. I wrote some unit tests for the project for the purpose of demonstration for example input and checkbox components are covered with tests.
+3. In case you need me to change anythign in the project please do not hesitate to ask me via my email aliglbayatpour@gmail.com
 
 ## Available Scripts
 
-In the project directory, you can run:
-
+If you don't want to use Docker and in case you have the compatible node version > 16 you can run the project easily by:
 ### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### `docker-compose up --build`
+
+You can run the project as a container in interactive mode by this.
+
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in the interactive watch mode.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-## smaller bundle size
-Installed sass as a dev dependency
-used @use instead of import 
-used global mixins and imported them only when needed
+# Reducing the bundle size
+1. In order to have a smaller bundle size I used create react app command since it minifies the code automatically and it's efficient for production code as well.
+2. In case the practice included multiple pages I'd use useMemo and lazy loading the pages to optimize the app
+3. I tried to avoid using unnecessary libraries which are bigger than what I needed(like MUI) I only used react-select for select box since the design was using a custom selectbox
+4. I tried to avoid any css duplication that's why I created media query mixins and only imported them in the components that needed media queries.
+5. I also created a global grid system similar to bootstrap to avoid duplicate scss
+6. I didn't use any big styling library like bootstrap or MUI for this project since I could build the project with few css rules and there wasn't any need for those full fledge libraries.
+7. I Dockerized the project since it's much safer and relaile when we deploy and use the docker container
